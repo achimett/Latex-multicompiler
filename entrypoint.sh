@@ -11,7 +11,7 @@ do
     docName="${docName##*/}"
     w_dir=${PWD}
     cd $path
-    latexmk -pdf -interaction=nonstopmode main.tex
+    latexmk -pdf -interaction=nonstopmode *.tex
     result=$?
     if [ $result != 0 ]; then
        failed[i]=$docName
